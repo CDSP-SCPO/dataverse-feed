@@ -1,0 +1,15 @@
+{
+  "name": "dataverse-feed",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "snowpack build",
+    "start": "snowpack dev"
+  },
+  "devDependencies": {
+    "@snowpack/plugin-svelte": "^3.7.0",
+    "snowpack": "^3.8.8",
+    "svelte": "^3.44.2"
+  }
+}

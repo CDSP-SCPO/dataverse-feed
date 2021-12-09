@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Dataverse Feed</title>
+        <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <script type="module" defer>
+            import createFeed from "./dist/main.js";
+            createFeed(
+                document.getElementById("dataverse-feed"),
+                {
+                    domain: "https://data.sciencespo.fr",
+                    params: {
+                        per_page: 5,
+                        show_facets: true,
+                        subtree: "cdsp",
+                    },
+                },
+            );
+        </script>
+    </head>
+    <body>
+        <main class="container my-5">
+            <h1>Dataverse Feed</h1>
+            <p>This is an example page using <a href="https://github.com/CDSP-SCPO/dataverse-feed">CDSP-SCPO/dataverse-feed</a> with the <a href="https://data.sciencespo.fr">data.sciencespo</a> Dataverse instance. Here are the datasets from the <a href="https://cdsp.sciences-po.fr">CDSP</a> collection:</p>
+            <div id="dataverse-feed"></div>
+        </main>
+    </body>
+</html>
