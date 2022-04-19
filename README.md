@@ -47,7 +47,7 @@ const defaultParams = {
 
 The full list of parameters are here: https://guides.dataverse.org/en/latest/api/search.html. 
 
-We currently use Boostrap 5, so you might want to add the CSS to your page: https://getbootstrap.com/docs/5.0/getting-started/introduction.
+We currently use Bootstrap 5, so you might want to add the CSS to your page: https://getbootstrap.com/docs/5.0/getting-started/introduction.
 
 
 ## Build and Development
