@@ -3,9 +3,6 @@ export default {
         src: '/dist',
         public: '/',
     },
-    buildOptions: {
-        baseUrl: './',
-    },
     plugins: ['@snowpack/plugin-svelte'],
     optimize: {
         entrypoints: ['src/main.mjs'],
