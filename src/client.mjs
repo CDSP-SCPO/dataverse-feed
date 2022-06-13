@@ -13,8 +13,20 @@ export default class Client {
     }
 
     async getItems(query, page) {
-        if (!query || query === "") query = "*";
-        this.url.searchParams.set('q', query);
+        // Initialize values
+        if (!this.params.q) this.params.q = "";
+        if (!query) query = "";
+        let finalQuery = "";
+
+        // If both the initial query and current query are set, join them
+        if (this.params.q && query) finalQuery = [this.params.q, query].join(" AND ");
+        // Else add them together (only one is set)
+        else finalQuery = this.params.q + query;
+        // If the final query is empty, set it to "*"
+        if (!finalQuery || finalQuery === "") finalQuery = "*";
+
+        // Set the search parameters
+        this.url.searchParams.set('q', finalQuery);
         this.url.searchParams.set('start', (page * this.params.per_page).toString());
 
         const response = await fetch(this.url.toString());
@@ -35,7 +47,7 @@ export default class Client {
                     const values = [];
                     for (const [index, label] of value.labels.entries()) {
                         const facetName = Object.keys(label)[0];
-                        const queryName = `${key}:"${facetName}"`;
+                        const queryName = `${key.replace(/_ss$/, "")}:"${facetName}"`;
                         // Remove facet if already selected
                         if (!query.includes(queryName)) {
                             values.push({
