@@ -78,9 +78,9 @@ npm run build
   - [ ] add an optional simple CSS with customization options
 - [ ] support for older browser
 - [ ] allow to specify a query and hide the search field
+- [ ] enable/disable autoloading
 - [ ] add a button to go to Dataverse advanced search page
 - [ ] add a link to the Dataverse instance
 - [ ] create npm package
 - [ ] improve code/components organization
-- [ ] fix search for facets using custom fields (see https://github.com/IQSS/dataverse/issues/8287)
-  - [ ] hotfix: add a new parameter: `excludeFacets` to remove facets than are not working properly
+- [ ] multilingual
