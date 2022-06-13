@@ -24,10 +24,12 @@
     $: fetch = client.getItems(query, currentPage);
 </script>
 
-<form class="input-group input-group-lg mb-3" on:submit|preventDefault={search}>
-    <input class="form-control" type="text" placeholder="Search..." bind:value={searchQuery}>
-    <button class="btn btn-primary">Search</button>
-</form>
+{#if !settings.hideSearch}
+    <form class="input-group input-group-lg mb-3" on:submit|preventDefault={search}>
+        <input class="form-control" type="text" placeholder="Search..." bind:value={searchQuery}>
+        <button class="btn btn-primary">Search</button>
+    </form>
+{/if}
 {#if selectedFacets.length >= 1}
     <p class="d-flex flex-wrap" style="gap: 0.5rem;">
         {#each selectedFacets as facet}
@@ -41,10 +43,10 @@
 {#await fetch}
     <div class="spinner-border text-primary mb-3"></div>
 {:then result}
-    {#if settings.params.show_facets}
+    {#if settings.params.show_facets && !settings.hideSearch}
         <Facets data={result.facets} on:message={handleFacetEvent}/>
     {/if}
-    <p class="mt-5">{result.itemCount} items</p>
+    <p>{result.itemCount} items</p>
     <ul class="list-unstyled">
         {#each result.items as item}
             <li class="mb-3"><Item data={item}/></li>

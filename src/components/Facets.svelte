@@ -10,7 +10,7 @@
     }
 </script>
 
-<form class="accordion mb-3" id="filters">
+<form class="accordion mb-5" id="filters">
     {#each data as facet}
         <div class="accordion-item">
             <h2 class="accordion-header" id="{facet.key}">
