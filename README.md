@@ -15,7 +15,12 @@ Example of use cases:
 
 ## Demo
 
-An demo is available here: https://cdsp-scpo.github.io/dataverse-feed/build.
+A demo is available here: https://cdsp-scpo.github.io/dataverse-feed/build.
+
+### Use case examples
+
+- Research center: https://cdsp-scpo.github.io/dataverse-feed/build/examples/center
+- ...
 
 
 ## Getting started
