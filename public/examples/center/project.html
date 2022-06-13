@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Dataverse Feed</title>
+        <link rel="icon" type="image/png" sizes="32x32" href="%PUBLIC_URL%/favicon-32x32.png">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <script type="module" defer>
+            import createFeed from "%PUBLIC_URL%/dist/main.js";
+            createFeed(
+                document.getElementById("dataverse-feed"),
+                {
+                    domain: "https://data.sciencespo.fr",
+                    params: {
+                        per_page: 5,
+                        subtree: "elipss",
+                    },
+                    hideSearch: true,
+                },
+            );
+        </script>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="./index.html">Research center</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#">Researchers</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#">About</a>
+                        </li>
+                        </ul>
+                    </div>
+                </div>
+              </nav>
+        </header>
+        <main class="container my-5">
+            <img src="https://picsum.photos/id/0/300/200" class="card-img-top mb-2" style="width: 18rem;">
+            <h1>ELIPSS</h1>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur odio tellus, mollis a tortor vitae, interdum fringilla arcu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent facilisis nec lectus eget scelerisque. Donec nec lobortis mauris. Cras convallis rhoncus leo non tempor. Sed facilisis hendrerit mi, facilisis accumsan leo accumsan vestibulum. Nulla porttitor, velit at gravida molestie, nibh neque ultrices justo, id condimentum diam purus ac elit. Integer urna ex, fermentum a augue nec, tempor sodales nulla. Maecenas venenatis nibh elit, convallis aliquam enim consectetur at. Etiam nec luctus urna. Aenean lacinia dui sit amet ipsum tincidunt, at mattis orci pharetra. Praesent pharetra, velit sit amet elementum vehicula, ex mauris finibus purus, in accumsan ipsum magna non justo. 
+            </p>
+            <p class="mb-5">
+                Suspendisse sit amet purus lacinia arcu dictum bibendum. Aenean gravida sed turpis fermentum malesuada. Integer id ultricies nunc. Nullam eget leo risus. Maecenas tempor, erat eget rhoncus blandit, elit quam maximus augue, non rutrum mi mi tempor lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sodales congue lacus, quis fringilla erat interdum eget.
+            </p>
+            <h2>Data</h2>
+            <div id="dataverse-feed"></div>
+        </main>
+    </body>
+</html>
