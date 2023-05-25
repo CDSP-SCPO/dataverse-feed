@@ -2,7 +2,10 @@
     export let data;
 
     const descriptionMaxLength = 400;
-    if (data.description.length > descriptionMaxLength) {
+
+    if (!data.description) {
+        data.description = "";
+    } else if (data.description.length > descriptionMaxLength) {
         data.description = `${data.description.slice(0, descriptionMaxLength).trim()}...`;
     }
 </script>
