@@ -2,7 +2,7 @@
 
 Embed a feed of your Dataverse items (collections, datasets, files) in your webpage using the [Dataverse search API](https://guides.dataverse.org/en/latest/api/search.html).
 
-Dataverse Feed is a **JavaScript module** built with [**Svelte**](https://svelte.dev/) and [**Snowpack**]](https://www.snowpack.dev/).
+Dataverse Feed is a **JavaScript module** built with [**Svelte**](https://svelte.dev/) and [**Snowpack**](https://www.snowpack.dev/).
 
 
 ## Goal
