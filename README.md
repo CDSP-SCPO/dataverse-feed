@@ -1,17 +1,20 @@
-# Dataverse Feed (PROTOTYPE)
+# Dataverse Feed: (PROTOTYPE)
 
-Embed a feed of your Dataverse items (collections, datasets, files) in your webpage using the [search API](https://guides.dataverse.org/en/latest/api/search.html). JavaScript module built with Svelte and Snowpack.
+Embed a feed of your Dataverse items (collections, datasets, files) in your webpage using the [Dataverse search API](https://guides.dataverse.org/en/latest/api/search.html).
+
+Dataverse Feed is a **JavaScript module** built with [**Svelte**](https://svelte.dev/) and [**Snowpack**]](https://www.snowpack.dev/).
 
 
 ## Goal
 
 Create a simple customizable widget that can be seamlessly integrated to any website. This widget should adapt to the needs of the webpage feature-wise while respecting the design language.
 
-Example of use cases:
-- Integrate Dataverse's search engine to a page, with or without facets
-- Display the latest uploaded datasets in a collection
-- ...
-
+Main features:
+- Seamless integration of Dataverse's search engine to a page
+- Displays or hides facets
+- Granular query support, to fectch
+        - the latest uploaded datasets in a collection
+        - any compound search, combining Dataverse collections, metadata values and boolean operators (`dvName:cdsp AND title:COVID`)
 
 ## Demo
 
@@ -20,6 +23,8 @@ A demo is available here: https://cdsp-scpo.github.io/dataverse-feed/build.
 ### Use case examples
 
 - Research center: https://cdsp-scpo.github.io/dataverse-feed/build/examples/center
+- Researcher's publications page (research data section)
+- Domain or topic specific portal
 - ...
 
 
